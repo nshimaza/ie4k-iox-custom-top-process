@@ -69,7 +69,7 @@ Running command : [ssh -p 22 -i topproc.pem appconsole@10.10.10.10]
 
 ## Proxy for Docker container
 
-The build process of Docker image involves Internet access from
+The build process of the Docker image involves Internet access from
 inside of container to be built.  If your Docker is sitting behind
 a proxy, you have to tell container proxy configuration to be used
 by processes of inside container.  This must be done separately
