@@ -1,0 +1,21 @@
+descriptor-schema-version: "2.2"
+info:
+  name: topproc
+  version: latest
+app:
+  cpuarch: ppc
+  env:
+    PATH: /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+  resources:
+    cpu: 50
+    disk: 2
+    memory: 64
+    network:
+    - interface-name: eth0
+      ports: {}
+    profile: custom
+  startup:
+    rootfs: rootfs.ext2
+    target:
+    - /usr/local/bin/topproc
+  type: docker
