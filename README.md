@@ -36,7 +36,7 @@ $ sudo docker run -ti topproc /bin/sh
 / #
 ```
 
-# Run
+## Run
 
 Navigate to app directory and do following.
 
