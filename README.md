@@ -71,8 +71,9 @@ Running command : [ssh -p 22 -i topproc.pem appconsole@10.10.10.10]
 
 The build process of Docker image involves Internet access from
 inside of container to be built.  If your Docker is sitting behind
-proxy, you have to tell proxy configuration inside processes of
-Docker container as well as Docker itself.
+a proxy, you have to tell container proxy configuration to be used
+by processes of inside container.  This must be done separately
+from proxy setting for Docker engine itself.
 
 To tell your proxy settings to container you run, create
 `~/.docker/config.json` and write proxy configuration like this.
