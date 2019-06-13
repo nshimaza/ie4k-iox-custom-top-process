@@ -4,6 +4,8 @@ Demonstrate how you can run your own top level process on IOx on Cisco IE4000
 ## Build
 
 Do this on a Linux.  You will get package.tar for IE4000.
+See note on the bottom of this README if your Docker environment
+is behind proxy.
 
 ```sh
 cd docker
@@ -38,7 +40,7 @@ $ sudo docker run -ti topproc /bin/sh
 
 ## Run
 
-Navigate to app directory and do following.
+Navigate to `app` directory and do following.
 
 ```console
 ioxclient application run topproc package.tar
@@ -64,3 +66,26 @@ Running command : [ssh -p 22 -i topproc.pem appconsole@10.10.10.10]
 - IOS 15.2(7)E
 - IOx 1.7.1.7 (bundled with IOS 15.2(7)E)
 - ioxclient version 1.8.1.0
+
+## Proxy for Docker container
+
+The build process of Docker image involves Internet access from
+inside of container to be built.  If your Docker is sitting behind
+proxy, you have to tell proxy configuration inside processes of
+Docker container as well as Docker itself.
+
+To tell your proxy settings to container you run, create
+`~/.docker/config.json` and write proxy configuration like this.
+
+```json
+{
+ "proxies":
+ {
+   "default":
+   {
+     "httpProxy": "http://your-proxy-server:port",
+     "httpsProxy": "http://your-proxy-server:port"
+   }
+ }
+}
+```
