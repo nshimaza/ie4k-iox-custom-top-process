@@ -59,3 +59,8 @@ Running command : [ssh -p 22 -i topproc.pem appconsole@10.10.10.10]
    37 root      3628 R    ps
 / # 
 ```
+## Tested Software Versions
+
+- IOS 15.2(7)E
+- IOx 1.7.1.7 (bundled with IOS 15.2(7)E)
+- ioxclient version 1.8.1.0
