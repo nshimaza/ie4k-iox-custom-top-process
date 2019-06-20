@@ -15,7 +15,7 @@ app:
       ports: {}
     profile: custom
   startup:
-    rootfs: rootfs.ext2
+    rootfs: rootfs.ext4
     target:
     - /usr/local/bin/topproc
   type: docker
